@@ -1,0 +1,134 @@
+@font-face{
+    font-family: Coolvetica;
+    font-style: normal;
+    src: url(coolvetica\ compressed\ hv.otf);
+}
+:root{
+    --blanco:#fff;
+    --oscuro:#000;
+    --gris:#cccccc; 
+    --verdefriooscuro:#1A4930;
+    --verdefrioclaro:#256845;
+    --verdeoliva:#4D6625;
+    --crudo:#D1BE50;
+    --titulos:'Coolvetica', cursive;
+    --subtitulos:'Coolvetica', cursive;
+    --parrafos:'Arial', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+     /*1rem = 10px*/
+    font-size: 62.5%;
+}
+
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+
+/*Globales*/
+h1, h2, h3{
+    font-family: var(--titulos);
+}
+
+p, a{
+    font-family: var(--parrafos);
+}
+.ocultar{
+    display: none;
+}
+
+@keyframes desplazamiento {
+
+    /*desplazamiento incial*/
+
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/*encabezado*/
+.encabezado{
+    background-image: url(../assets/pampa1.jpeg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 70rem;
+}
+.logo{
+    margin-top: 4rem;
+    
+}
+.logo img{
+    float: left;
+    left: unset;
+    height: 170px;
+    width: 250px;
+}
+.contenido-navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navegacion{
+    position: absolute;
+    left: 2rem;
+    top: 200px;
+    animation: desplazamiento .5s ease-in-out;
+}
+
+@media(min-width: 768px){
+    .ocultar{
+        display: inline;
+    }
+}
+
+.navegacion a{
+    display: block;
+    font-family: var(--parrafos);
+    font-size: 2.1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+@media(min-width: 768px){
+    .navegacion a{
+        display: inline;
+        padding: 3rem;
+    }
+}
+
+@media(min-width: 768px){
+     .navegacion{
+        position: relative;
+        top: unset;
+        margin-right: 2rem;
+        width: auto;
+     }
+}
+
+.hamburguesa{
+    margin: 60px;
+}
+
+.hamburguesa span{
+    width: 5rem;
+    height: 1rem;
+    margin: 0.3rem;
+    border: 1px solid white;
+    background-color: var(--oscuro);
+    display: block;
+}
+
+@media(min-width: 768px){
+    .hamburguesa{
+        display: none;
+    }
+}
