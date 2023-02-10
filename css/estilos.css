@@ -3,6 +3,11 @@
     font-style: normal;
     src: url(coolvetica\ compressed\ hv.otf);
 }
+@font-face{
+    font-family: Coolvetica2;
+    font-style: italic;
+    src: url(coolvetica\ condensed\ rg.otf);
+}
 :root{
     --blanco:#fff;
     --oscuro:#000;
@@ -12,7 +17,7 @@
     --verdeoliva:#4D6625;
     --crudo:#D1BE50;
     --titulos:'Coolvetica', cursive;
-    --subtitulos:'Coolvetica', cursive;
+    --subtitulos:'Coolvetica2', cursive;
     --parrafos:'Arial', sans-serif;
 }
 
@@ -59,6 +64,18 @@ p, a{
     background-size: cover;
     background-position: center center;
     min-height: 70rem;
+    position: relative;
+    z-index: 1;
+}
+.encabezado::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.3);
+    z-index: -1;
 }
 .logo{
     margin-top: 4rem;
@@ -67,6 +84,7 @@ p, a{
 .logo img{
     float: left;
     left: unset;
+    color: var(--blanco);
     height: 170px;
     width: 250px;
 }
@@ -92,10 +110,17 @@ p, a{
 .navegacion a{
     display: block;
     font-family: var(--parrafos);
+    font-weight: bolder;
     font-size: 2.1rem;
     padding: 0.5rem;
     text-decoration: none;
     color: var(--blanco);
+    transition: all .3s ease-in-out;
+}
+.navegacion a:hover{
+    cursor: pointer;
+    color: var(--oscuro);
+    opacity: 30%;
 }
 
 @media(min-width: 768px){
@@ -111,19 +136,21 @@ p, a{
         top: unset;
         margin-right: 2rem;
         width: auto;
+        animation: unset;
      }
 }
 
 .hamburguesa{
+    margin-top: 90px;
     margin: 60px;
 }
 
 .hamburguesa span{
-    width: 5rem;
-    height: 1rem;
-    margin: 0.3rem;
+    width: 6rem;
+    height: 0.6rem;
+    margin: 0.5rem;
     border: 1px solid white;
-    background-color: var(--oscuro);
+    background-color: var(--blanco);
     display: block;
 }
 
@@ -131,4 +158,13 @@ p, a{
     .hamburguesa{
         display: none;
     }
+}
+.contenido-encabezado h1{
+    font-family: var(--subtitulos);
+    color: var(--blanco);
+    text-align: center;
+    font-weight: 0;
+    margin-top: 140px;
+    font-size: 16rem;
+    font-weight: 200;
 }
