@@ -32,16 +32,22 @@ html{
 }
 
 /*Globales*/
-h1, h2, h3{
+h1, h2{
     font-family: var(--titulos);
 }
 
-p, a{
+h3, h4, p, a{
     font-family: var(--parrafos);
 }
 .ocultar{
     display: none;
 }
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+}
+
 
 @keyframes desplazamiento {
 
@@ -137,7 +143,7 @@ p, a{
         margin-right: 2rem;
         width: auto;
         animation: unset;
-     }
+    }
 }
 
 .hamburguesa{
@@ -164,7 +170,157 @@ p, a{
     color: var(--blanco);
     text-align: center;
     font-weight: 0;
-    margin-top: 140px;
-    font-size: 16rem;
+    padding-top: 12rem;
+    font-size: 6rem;
     font-weight: 200;
+}
+@media(min-width: 768px) {
+    .contenido-encabezado h1{
+        font-family: var(--subtitulos);
+        color: var(--blanco);
+        text-align: center;
+        font-weight: 0;
+        padding-top: 2rem;
+        font-size: 16rem;
+        font-weight: 200;
+    }
+
+}
+
+/*contenido about us*/
+.aboutus{
+    position: absolute;
+    align-items: center;
+    padding: 2rem;
+    height: 1700px;
+    background-color: var(--crudo);
+}
+.aboutus p, h3{
+    padding: 1rem;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: left;
+}
+.aboutus h4{
+    font-size: 2rem;
+    text-align: center;
+}
+.aboutus p strong{
+    font-style: italic;
+}
+@media(min-width: 768px) {
+    .aboutus{
+        height: 800px;
+    }
+    .aboutus p, h3, h4{
+        font-family: var(--parrafos);
+        margin: 3rem 8rem;
+        font-size: 1.8rem;
+    }
+    .aboutus p{
+        font-size: 1.8rem;
+        padding: 0rem;
+        line-height: 25px;
+        letter-spacing: 0rem;
+    }
+    .aboutus h3{
+        margin-top: 5rem;
+        padding-bottom: 0rem;
+        margin-left: 6.85rem;
+    }
+    .aboutus h4{
+        padding-top: 3rem;
+    }
+}
+/*contenido Our Team*/
+.ourteam{
+    margin-top: 170rem;
+    display: block;
+    background-color: var(--verdefriooscuro);
+    position: relative;
+    justify-content: center;
+    height: 1500px;
+}
+.ourteam img{
+    justify-content: space-around;
+    margin: 7rem 7rem;
+    height: 284px;
+    width: 226px;
+    margin-bottom: 0px;
+}
+.ourteam h3, p{
+    margin-top: 0rem;
+    font-size: 1.5rem;
+    margin: 1rem 3rem;
+    text-align: center;
+    padding: 0rem;
+}
+.ourteam h3{
+    font-size: 2rem;
+}
+@media(min-width: 768px) {
+    .ourteam{
+        margin-top: 80rem;
+        height: auto;
+        width: 100%;
+}
+    .contenidoourteam{
+        display: flex;
+        justify-content: space-between;
+        flex: 0 0 0 calc(50%);
+    }
+    .santiago{
+        display: grid;
+    }
+    .santiago img{
+        margin-top: 10rem;
+        width: 350px;
+        height: 480px;
+        margin-left: 27rem;
+    }
+    .santiago h3{
+        text-align: left;
+        margin-top: 3.5rem;
+        margin-left: 27rem;
+        margin-bottom: 0;
+    }
+    .santiago h4{
+        margin-top: 0px;
+        font-weight: lighter;
+        margin-left: 27rem;
+        font-size: 1.4rem;
+    }
+    .santiago p{
+        text-align: left;
+        margin-top: 0;
+        margin-left: 27rem;
+        margin-right: 6rem;
+    }
+    .nicolas{
+        display: grid;
+    }
+    .nicolas img{
+        margin-top: 10rem;
+        margin-left: 2rem;
+        width: 350px;
+        height: 480px;
+        float: left;
+    }
+    .nicolas h3{
+        text-align: left;
+        margin-top: 3.5rem;
+        margin-left: 2rem;
+        margin-bottom: 0px;
+      
+    }
+    .nicolas p{
+        text-align: left;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 26rem;
+    }
+    
+    
+   
+    
 }
