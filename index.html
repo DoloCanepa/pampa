@@ -9,6 +9,7 @@
     <title>Pampa Internacional</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,12 +19,12 @@
                 <img src="assets/logo.png" alt="logo">
             </div>
             <nav class="navegacion ocultar">
-                <a href="#">About us</a>
-                <a href="#">Our Team</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-                <a href="#">Jobs</a>
-                <a href="#">News</a>
+                <a href="#nosotros">About us</a>
+                <a href="#equipo">Our Team</a>
+                <a href="#services">Services</a>
+                <a href="#contacto">Contact</a>
+                <a href="#jobs">Jobs</a>
+                <a href="#news">News</a>
             </nav>
             <div class="hamburguesa">
                 <span></span><span></span><span></span><span></span>
@@ -34,7 +35,7 @@
         </div>
     </header>
 
-    <div class="aboutus">
+    <div class="aboutus" id="nosotros">
         <p>We are a team of farm consultants, recruiters, immigration advisers, and HR specialists who decided to
             address one of the most critical
             problems of New Zealand businesses: the shortage of skilled workers.
@@ -65,7 +66,7 @@
 
     </div>
 
-    <section class="ourteam">
+    <section class="ourteam" id="equipo">
         <div class="contenidoourteam">
             <div class="santiago">
                 <img src="assets/A7_05300.jpeg" alt="santiago">
@@ -89,7 +90,8 @@
             </div>
         </div>
     </section>
-    <section class="services">
+
+    <section class="services" id="services">
         <div class="contenidoservices">
             <h3>SERVICES</h3>
             <h4>Training</h4>
@@ -141,24 +143,24 @@
 
         </div>
     </section>
-    
-    
-    <section class="contact">
+
+
+    <section class="contact" id="contacto">
         <div class="contenidocontact contenedor">
             <div class="texto-contact">
                 <h4>CONTACT</h4>
                 <p>Please fill the form an we'll be in touch as soon as possible</p>
             </div>
 
-            <form class="formulario-contact">
+            <form class="formulario-contact" netlify>
                 <div class="input-contact">
-                    <input type="text" placeholder="name" id="name">
+                    <input type="text" name="name" placeholder="name" id="name">
                 </div>
                 <div class="input-contact">
-                    <input type="mail" placeholder="email adress" id="mail">
+                    <input type="mail" name="email" placeholder="email adress" id="mail">
                 </div>
                 <div class="input-contact">
-                    <input type="tel" placeholder="phone number" id="tel">
+                    <input type="tel" name="tel" placeholder="phone number" id="tel">
                 </div>
                 <div class="input-contact">
                     <textarea name="message" placeholder=" your message" id="mensaje"></textarea>
@@ -173,16 +175,27 @@
 
     <section class="jobs-news">
         <div class="acordeon">
-            <div class="jobs">
+            <div class="jobs" id="jobs">
                 <h3>JOBS</h3>
                 <P class="contenido">COMING SOON</P>
             </div>
-            <div class="news">
+            <div class="news" id="news">
                 <h3>NEWS</h3>
                 <P class="contenidonews">COMING SOON</P>
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="contenido-footer">
+            <div class="logofooter">
+                <img src="assets/logofoot.png" alt="logofooter">
+            </div>
+            <div class="redes">
+                <a href="https://www.facebook.com/profile.php?id=100089898390591" class="fa fa-facebook"></a>
+                <a href="https://instagram.com/pampainternational?igshid=YmMyMTA2M2Y=" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/app.js"></script>
 </body>

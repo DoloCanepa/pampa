@@ -32,6 +32,12 @@ function cerrarMenu() {
     });
 }
 
+function cambioSeccion(seccion){
+    seccion.scrollIntoView({
+        behavior:'smooth'
+    })
+}
+
 //acordeon//
 jobs.addEventListener('click', function() {
     contenido.classList.toggle('desplegado');
