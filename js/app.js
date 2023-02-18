@@ -6,10 +6,10 @@ const contenido = document.querySelector('.contenido');
 const news = document.querySelector('.news');
 const contenidonews = document.querySelector('.contenidonews');
 
+
 document.addEventListener('DOMContentLoaded', () => {
     mostrarMenu();
     cerrarMenu();
-
 });
 
 function mostrarMenu() {
@@ -32,19 +32,24 @@ function cerrarMenu() {
     });
 }
 
-function cambioSeccion(seccion){
+function cambioSeccion(seccion) {
     seccion.scrollIntoView({
-        behavior:'smooth'
+        behavior: 'smooth'
     })
 }
 
 //acordeon//
-jobs.addEventListener('click', function() {
+jobs.addEventListener('click', function () {
     contenido.classList.toggle('desplegado');
 });
 
-news.addEventListener('click', function() {
+news.addEventListener('click', function () {
     contenidonews.classList.toggle('desplegado');
 });
+
+
+
+
+
 
 

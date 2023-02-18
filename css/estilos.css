@@ -36,11 +36,15 @@ html {
 }
 
 /*Globales*/
-h1, h2 {
+h1,
+h2 {
     font-family: var(--titulos);
 }
 
-h3, h4, p, a {
+h3,
+h4,
+p,
+a {
     font-family: var(--parrafos);
 }
 
@@ -78,7 +82,8 @@ h3, h4, p, a {
     min-height: 70rem;
     position: relative;
     z-index: 1;
-    background-attachment: fixed;
+
+
 }
 
 @media(min-width: 768px) {
@@ -116,11 +121,24 @@ h3, h4, p, a {
     align-items: center;
     justify-content: space-around;
     z-index: 3;
+    position: fixed;
+    margin-top: -1rem;
 }
+@media(min-width: 768px) {
+    .contenido-navegacion {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 3;
+        position: relative;
+        margin-top: 0rem;
+    }
+}
+
 
 .navegacion {
     position: absolute;
-    left: 1.5rem;
+    left: 4rem;
     padding: 0rem;
     top: 200px;
     animation: desplazamiento .5s ease-in-out;
@@ -168,7 +186,7 @@ h3, h4, p, a {
 
 .hamburguesa {
     margin-top: 90px;
-    margin: 60px;
+    padding-left: 3rem;
 }
 
 .hamburguesa span {
@@ -191,20 +209,25 @@ h3, h4, p, a {
     color: var(--blanco);
     text-align: center;
     font-weight: 0;
-    padding-top: 20rem;
+    padding-top: 40rem;
     font-size: 6rem;
     font-weight: 200;
+   
 }
 
+
 @media(min-width: 768px) {
+    .contenido-encabezado{
+        position: relative;
+        height: 200px;
+    }
     .contenido-encabezado h1 {
-        font-family: var(--subtitulos);
-        color: var(--blanco);
-        text-align: center;
-        font-weight: 0;
-        padding-top: 2rem;
-        font-size: 16rem;
-        font-weight: 200;
+    font-family: var(--subtitulos);
+    color: var(--blanco);
+    text-align: center;
+    padding-top: 0rem;
+    font-size: 16rem;
+    font-weight: 200;
     }
 
 }
@@ -317,7 +340,7 @@ h3 {
     float: inline-start;
     width: 100%;
     margin-top: 5rem;
-    margin-bottom: 0px;
+    margin-bottom: 2rem;
 }
 
 .nicolas h3 {
@@ -416,9 +439,10 @@ h3 {
 
 .contenidoservices h3 {
     text-align: left;
-    font-family: var(--subtitulos);
-    font-weight: lighter;
-    font-size: 3rem;
+    font-family: var(--parrafos);
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1rem;
     padding-top: 2rem;
     margin-left: 0.5rem;
 }
@@ -494,9 +518,11 @@ h3 {
 }
 
 .texto-contact h4 {
-    font-family: var(--subtitulos);
-    font-weight: lighter;
-    font-size: 3rem;
+    font-family: var(--parrafos);
+    font-family: var(--parrafos);
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1rem;
 }
 
 .texto-contact p {
@@ -513,7 +539,7 @@ h3 {
 .formulario-contact input {
     height: 40px;
     width: 90%;
-    font-family: var(--subtitulos);
+    font-family: var(--parrafos);
     padding: 1rem 0.5rem;
     margin-bottom: 0.5rem;
     border: 1px solid var(--oscuro);
@@ -526,7 +552,7 @@ h3 {
 .formulario-contact textarea {
     height: 60px;
     width: 90%;
-    font-family: var(--subtitulos);
+    font-family: var(--parrafos);
     padding: 1rem 0.5rem;
     margin-bottom: 0.5rem;
     border: 1px solid var(--oscuro);
@@ -538,17 +564,21 @@ h3 {
 }
 
 .btn-contact {
-    width: 20%;
+    width: 30%;
     font-family: var(--parrafos);
     font-weight: lighter;
+    color: var(--oscuro);
+
 }
 
 .btn-contact input {
-    font-family: var(--subtitulos);
+    font-family: var(--parrafos);
     padding: 0rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     text-align: center;
     cursor: pointer;
+    background-color: lightgray;
+    color: var(--oscuro);
     transition: color .3s ease-in-out;
 }
 
@@ -654,10 +684,19 @@ h3 {
     cursor: pointer;
 }
 
+@media(min-width:768px) {
+    .acordeon h3 {
+        font-family: var(--subtitulos);
+        font-weight: lighter;
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
 .acordeon h3 {
-    font-family: var(--subtitulos);
-    font-weight: lighter;
-    font-size: 3rem;
+    font-family: var(--parrafos);
+    font-weight: bold;
+    font-size: 2rem;
     text-align: center;
 }
 
