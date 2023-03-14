@@ -7,8 +7,21 @@ $email = $_POST['email'];
 $tel = $_POST['tel'];
 $message = $_POST['message'];
 
+$ip= $_SERVER['REMOTE_ADDR'];
+$captcha = $_POST['g-recaptcha-response'];
+$secretkey= "6Lcq1f4kAAAAAHnh3jms79UurnIic7lIrNuzVPgi";
+
+$respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+
+$atributos = json_decode($respuesta, TRUE);
+
 $header = "Sent from the Pampa International page";
 $fullMessage = $message .  "\nKindRegards: " . $name;
+
+if(!$atributos['success']){
+    echo "Error: Por favor, confirma que eres humano.";
+    exit;
+}
 
 mail($to, $email, $fullMessage, $header);
 echo "<script>alert('mail sent successfully')</script>";
